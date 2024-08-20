@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF_MVVM_Dashboard
+namespace WPF_MVVM_Dashboard.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
