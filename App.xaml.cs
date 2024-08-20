@@ -22,8 +22,7 @@ namespace WPF_MVVM_Dashboard
 
         protected override Window CreateShell()
         {
-            var w = Container.Resolve<MainWindow>();
-            return w;
+            return Container.Resolve<MainWindow>();
         }
     }
 
