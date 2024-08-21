@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Prism.Mvvm;
+using WPF_MVVM_Dashboard.Services;
+using WPF_MVVM_Dashboard.ViewModels.WPF_MVVM_Dashboard.ViewModels;
 
 namespace WPF_MVVM_Dashboard.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
         private string _title = "Prism Application";
+
+        private readonly IDataService _dataService;
         public string Title
         {
             get => _title;
@@ -40,8 +44,7 @@ namespace WPF_MVVM_Dashboard.ViewModels
 
         private void InitializeDashboard()
         {
-            DashboardViewModel = new DashboardViewModel();
-            // You can pass any required dependencies to DashboardViewModel here
+            DashboardViewModel = new DashboardViewModel(_dataService);
         }
 
         private void DateTimeUpdateButtonExecute()
